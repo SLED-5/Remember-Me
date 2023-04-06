@@ -1,0 +1,83 @@
+[{
+        "npc": ["Dear, I need to use your computer👩🏻‍💻 to make an appointment with Dr. Wilson for you. What's your password?"],
+        "player": {
+            "1": "Robert"
+        },
+        "playerMsg": {
+            "1": "Robert"
+        },
+        "specialResponse": {
+        },
+        "nextScene": ""
+        
+    },
+    
+    {
+            "npc": ["It's not safe to use your name as password."],
+            "player": {
+                "1": "It's easier to remember"
+            },
+            "playerMsg": {
+                "1": "It's easier to remember"
+            },
+            "specialResponse": {
+            },
+            "nextScene": ""
+            
+        },
+
+    {
+        "npc": ["It's Mike's 25th birthday🎂 Anne and him will come home for dinner tonight. Can you buy some groceries🛒 on your way back?"],
+        "player": {
+            "1": "Sure, I'll buy some 🦐 and 🐟",
+            "2": "I'll grab some steak 🥩"
+        },
+        "playerMsg": {
+            "1": "Sure, I'll buy some 🦐 and 🐟",
+            "2": "I'll grab some steak 🥩"
+        },
+        "specialResponse": {
+            "1": "No honey. Mike is allergic to shrimp, don't you remember?",
+            "2": "Good idea💖 We have some shrimp in the refrigerator, but Mike is allergic to it."
+        },
+        "nextScene": ""
+    },
+    
+    {
+        "npc": ["I'm sending you a shopping list.", "🧅  🍇  🥚  🌶️  🥩  🥓  🍋  🍌  🥐  🫛  🫐  🌷"],
+        "player": {
+            "1": "I'll be right back"
+        },
+        "playerMsg": {
+            "1": "I'll be right back"
+        },
+        "specialResponse": {
+        },
+        "nextScene": ""
+    },
+
+    {
+        "npc": ["Please stay safe on your way back. I'm worried about you being outside alone. Call me if you need any help, alright?"],
+        "player": {
+            "1": "Sure, I will",
+            "2": "There's nothing to worried about"
+        },
+        "playerMsg": {
+            "1": "😬 Err, no... I have no idea. And I don't even know how to code in Swift.",
+            "2": "I got too many of them. But I don't know how to code them in Swift."
+        },
+        "specialResponse": {
+            "1": "Take care. I'm waiting for you ☺️",
+            "2": "I know. Just take care of yourself 😘"
+        },
+        "nextScene": ""
+    },
+
+    {
+        "npc": ["#NEXT_SCENE#"],
+        "player": {},
+        "playerMsg": {},
+        "specialResponse": {},
+        "nextScene": "market"
+    }
+]
