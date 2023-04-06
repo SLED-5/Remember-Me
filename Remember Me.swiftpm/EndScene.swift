@@ -17,18 +17,18 @@ struct EndScene: View {
                     .frame(minHeight: 280, maxHeight: 450)
                     .transition(.slide)
                 HStack {
-                    Text("Thank you for playing Remember Me.")
+                    Text("Thank you for playing *Remember Me*.")
                         .font(.title.weight(.bold))
                 }
                 VStack(alignment: .leading, spacing: 10) {
                     Text("This game is a briefly representation about a person with Alzheimer’s disease. ")
                     Text("Alzheimer's disease (AD) is a neurodegenerative 🧠 disease that usually starts slowly and progressively worsens")
-                    Text("As the disease advances, symptoms can include problems with language, disorientation, mood swings, loss of motivation, self-neglect, and behavioral issues.")
-                    Text("As a person's condition declines, they often withdraw from family and society.")
-                    Text("Gradually, bodily functions are lost, ultimately leading to death.")
+                    Text("As the disease advances, symptoms can include problems with language, disorientation, mood swings, loss of motivation, self-neglect, and behavioral issues. 😶‍🌫️")
+                    Text("As a person's condition declines, they often withdraw from family and society. 🫥")
+                    Text("Gradually, bodily functions are lost, ultimately leading to death. 🪦")
                         .padding(.bottom)
-                    Text("More than 6 million Americans are living with Alzheimer's.")
-                    Text("By 2050, this number is projected to rise to nearly 13 million.")
+                    Text("More than **6 million** Americans are living with Alzheimer's.")
+                    Text("By 2050, this number is projected to rise to nearly **13 million**.")
                 }.multilineTextAlignment(.leading)
                 
                 VStack(alignment: .leading, spacing: 10) {

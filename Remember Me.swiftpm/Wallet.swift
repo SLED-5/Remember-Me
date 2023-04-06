@@ -49,7 +49,7 @@ private class SceneStatus: ObservableObject {
 }
 struct Wallet: View {
     @EnvironmentObject var gameStatus: GameStatus
-    @StateObject var cheat = Cheat(hintContent: "You’re trying to recall your credit card PIN.\nThis is the classic memory game called Concentration (or Shinkei-suijaku).\nYou need to match cards with same icon.\nTap a card to reveal its icon.\nMatch all cards to pass this scene.\n\nWe strongly discourage skipping this scene, since it involves one of the basic mechanism for this game.")
+    @StateObject var cheat = Cheat(hintContent: "You’re trying to recall your credit card PIN.\nThis is the classic memory game called Shinkei-suijaku (or Nervous Breakdown).\nYou need to match cards with same icon.\nTap a card to reveal its icon.\nMatch all cards to pass this scene.\n\nWe strongly discourage skipping this scene, since it involves one of the basic mechanism for this game.")
     @State var showSkipsheet: Bool = false
     @StateObject private var sceneStatus = SceneStatus()
     @StateObject private var memoryScene = MemorySceneStatus(boardFile: "wallet", disableDisorderLevel: true)
@@ -68,31 +68,36 @@ struct Wallet: View {
                     .padding(.leading, 100)
                 
                 VStack {
-                    Text("Please Enter Your PIN")
-                        .font(.title)
-                        .bold()
                     
-                    Text("(Try swiping your card)")
-                        .foregroundColor(.secondary)
+                    VStack {
+                        Text("Please Enter Your PIN")
+                            .font(.title)
+                            .bold()
+                        
+                        Text("(Try swiping your card)")
+                            .foregroundColor(.secondary)
+                    }
+                    HStack(spacing: 30) {
+                        VStack {
+                            Text("Tap to reveal a card.")
+                            Text("👆🏻 -> 🔎")
+                        }
+                        
+                        VStack {
+                            Text("Match cards with same icon to enter PIN")
+                            Text("🍋 〰️ 🍋")
+                        }.padding()
+                    }
+                }.frame(alignment: .top)
+                .padding(.top, 25)
+                .sheet(isPresented: $showSkipsheet, onDismiss: skipsheetCallBack) {
+                    SkipSheet(isPresented: $showSkipsheet).environmentObject(cheat)
                 }
             }
-            
-            HStack(spacing: 30) {
-                VStack {
-                    Text("Tap to reveal a card.")
-                    Text("👆🏻 -> 🔎")
-                }
                 
-                VStack {
-                    Text("Match cards with same icon to enter PIN")
-                    Text("🍋 〰️ 🍋")
-                }.padding()
-            }
-        }.frame(alignment: .top)
-        .padding(.top, 25)
-        .sheet(isPresented: $showSkipsheet, onDismiss: skipsheetCallBack) {
-            SkipSheet(isPresented: $showSkipsheet).environmentObject(cheat)
         }
+            
+            
             
         ZStack {
             Image("ssc")
@@ -103,6 +108,7 @@ struct Wallet: View {
             
             CardView(cardName: "applecard")
                 .frame(width: 500, height: 314)
+                .padding(30)
             
         }
             
@@ -136,6 +142,7 @@ struct Wallet: View {
                 } else {
                     ProgressView("Processing your payment...")
                         .font(.body)
+                        .frame(height: 400)
                 }
                 
             } else {
@@ -162,7 +169,8 @@ struct Wallet: View {
                 }
             }
             
-        }.frame(width: 600, height: 600)
+        }
+//        .frame(width: 600, height: 600)
     }
     
 

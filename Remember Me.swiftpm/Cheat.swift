@@ -1,5 +1,5 @@
 //
-//  GameCheat.swift
+//  Cheat.swift
 //  Remember Me
 //
 //  Created by Gabriel Zhang on 4/5/23.

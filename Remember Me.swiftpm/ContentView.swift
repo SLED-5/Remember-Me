@@ -1,3 +1,14 @@
+/*
+ Welcome to Remember Me
+ 
+ This game is designed to take advantage of screen space in Portrait mode
+ 
+ 
+ */
+
+
+
+
 import SwiftUI
 import SpriteKit
 
@@ -39,7 +50,7 @@ struct ContentView: View {
                 }
                 VStack {
                     GifImage("title")
-                        .frame(height: 300, alignment: .center)
+                        .frame(width:700, height: 300, alignment:.center)
                         .padding(.top, 20)
                         .transition(.slide)
                         .allowsHitTesting(false)
@@ -93,9 +104,7 @@ struct ContentView: View {
                             Text("Important note for gameplay")
                                 .bold()
                                 .foregroundColor(.white)
-                            
-                            Text("Sometimes your objectives are hidden. That's an intended design of this game.")
-                                .foregroundColor(.white)
+
                             Text("During your gameplay, you may find the following icons")
                                 .padding(.bottom)
                                 .foregroundColor(.white)
