@@ -55,16 +55,11 @@
         "specialResponse": {},
         "nextScene": ""
     },
-
     {
-        "npc": ["Okay. Do you want to use cash or credit card?", "#NEXT_SCENE#"],
+        "npc": ["#NEXT_SCENE#"],
         "player": {},
-        "playerMsg": {
-
-        },
-        "specialResponse": {
-
-        },
+        "playerMsg": {},
+        "specialResponse": {},
         "nextScene": "wallet"
     }
 ]

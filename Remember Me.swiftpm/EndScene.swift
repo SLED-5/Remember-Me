@@ -12,16 +12,16 @@ struct EndScene: View {
     
     var body: some View {
         ScrollView {
+            GifImage("title")
+                .frame(width:600, height: 200, alignment:.center)
+                .transition(.slide)
             VStack(alignment: .leading, spacing: 20) {
-                GifImage("title")
-                    .frame(minHeight: 280, maxHeight: 450)
-                    .transition(.slide)
                 HStack {
                     Text("Thank you for playing *Remember Me*.")
                         .font(.title.weight(.bold))
                 }
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("This game is a briefly representation about a person with Alzheimer’s disease. ")
+                    Text("This game features a brief moment in a day of a person with Alzheimer’s disease. ")
                     Text("Alzheimer's disease (AD) is a neurodegenerative 🧠 disease that usually starts slowly and progressively worsens")
                     Text("As the disease advances, symptoms can include problems with language, disorientation, mood swings, loss of motivation, self-neglect, and behavioral issues. 😶‍🌫️")
                     Text("As a person's condition declines, they often withdraw from family and society. 🫥")
@@ -39,7 +39,7 @@ struct EndScene: View {
                     Text("I want the player to feel frustrated and helpless when the objects become more and more blurry, and they have to recall harder and harder to continue playing.")
                     Text("The pain is no comparison to the real-life pain of losing recognition of things and memories of beloved ones.")
                     Text("It’s impossible to express even a little part of such pain, not mentioned is such a short experience.")
-                    Text("But I still hope you can feel something. Let's love our life, as much as we can 🤘🏻")
+                    Text("But I still hope you can feel something. Let's love our life, as much as we can 🫂")
                 }.multilineTextAlignment(.leading)
                 
                 VStack(alignment: .leading, spacing: 10) {

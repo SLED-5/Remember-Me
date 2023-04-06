@@ -1,29 +1,25 @@
 [{
-        "npc": ["Hi, how's your day sir?"],
+        "npc": ["Good night sir, where can I take you tonight?"],
         "player": {
-            "1": "I'm good.",
-            "2": "I don't remeber."
+            "1": "I want to go home"
         },
         "playerMsg": {
-            "1": "Robert"
         },
         "specialResponse": {
-            "1": "Glad to hear that.",
-            "2": "Oh, okay.."
         },
         "nextScene": ""
 
     },
 
     {
-        "npc": ["That would be $78.91 in total. Cash or card?"],
+        "npc": ["Certainly sir, could you please tell me your address so I can take you there?"],
         "player": {
-            "1": "Who are you?",
-            "2": "Where am I?"
+            "1": "My home",
+            "2": "My home",
+            "3": "My home",
+            "4": "My home"
         },
         "playerMsg": {
-            "1": "Who are you?",
-            "2": "Where am I?"
         },
         "specialResponse": {},
         "nextScene": ""
@@ -31,40 +27,45 @@
     },
 
     {
-        "npc": ["I'm sorry sir?"],
+        "npc": ["I'm sorry, but I need to know the specific address.", "Do you remember any landmarks nearby?"],
         "player": {
-            "1": "Who are you?",
-            "2": "Where am I?"
+            "1": "I don't remember"
         },
         "playerMsg": {
-            "1": "Who are you?",
-            "2": "Where am I?"
         },
         "specialResponse": {},
         "nextScene": ""
     },
 
     {
-        "npc": ["Err, my name is Claire and you're at Sam's Club. Do you need help sir?"],
+        "npc": ["Do you have any family member to contact?"],
         "player": {
-            "1": "No, I'm fine."
+            "1": "My wife, Emma",
+            "2": "My boy, Mike"
         },
         "playerMsg": {
-            "1": "No, I'm fine."
         },
-        "specialResponse": {},
+        "specialResponse": {"1": "You can give her a call to get the address.",
+            "2": "You can give him a call to see the address."},
         "nextScene": ""
     },
-
+    
     {
-        "npc": ["Okay. Do you want to use cash or credit card?", "#NEXT_SCENE#"],
+        "npc": ["Can I use your phone to make that call?"],
+        "player": {
+            "1":"(Give him your phone)"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {"1": "(*The driver helps you calling your family, and gets your address*) \nAlright, please sit tight. Let's go."},
+        "nextScene": ""
+    },
+    {
+        "npc": ["#NEXT_SCENE#"],
         "player": {},
-        "playerMsg": {
-
-        },
-        "specialResponse": {
-
-        },
+        "playerMsg": {},
+        "specialResponse": {},
         "nextScene": "memory"
     }
+    
 ]

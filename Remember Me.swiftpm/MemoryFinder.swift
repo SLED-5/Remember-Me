@@ -201,7 +201,6 @@ private struct topView: View {
     
     private func showSkipSheet() {
         self.showSkipsheet = true
-        sceneStatus.objectiveComplete = true
     }
     
     private func recallMemoryCard() {

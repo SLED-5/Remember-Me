@@ -27,6 +27,7 @@ private class SceneStatus: ObservableObject {
     @Published var objectiveComplete = false
     @Published var currentTip: Tip
     var tips: [Tip] = []
+    var products: [Product]
     @Published var showTip = true
     @Published var productsInCarts: [PackedProduct]
     @Published var total: Float
@@ -49,6 +50,7 @@ private class SceneStatus: ObservableObject {
             let Tip = Tip(from: "Robert", content: "Everything are so strange", instruction: "Your cognition is collapsing.\nTry recall harder by quickly tapping 🧠.")
             tips.append(Tip)
         }
+        self.products = loadProducts().shuffled()
         self.currentTip = tips[0]
         self.productsInCarts = []
         self.total = 0.00
@@ -102,7 +104,7 @@ private class SceneStatus: ObservableObject {
 }
 
 struct Market: View {
-    @StateObject var cheat = Cheat(hintContent: "In this scene, you can tap a grocery icon to add it to your cart.\nYou need to finish the shopping list to pass this scene.\nRemember Emma gave you a shopping list? You can tap 💬 icon to review it.\nAs time pass, your cognition and memory will collapse, and the objects will become blurry. Quickly tap 🧠 icon to restore your cognition.\n\nOnce you complete your objectives, tap \"Checkout\" button to continue. \n\n We strongly discourage skipping this scene, since it involves one of the basic mechanism for this game.")
+    @StateObject var cheat = Cheat(hintContent: "In this scene, you can tap a grocery icon to add it to your cart.\nYou need to finish the shopping list to pass this scene.\nRemember Emma gave you a shopping list? You can tap 💬 icon to review it.\nAs time pass, your cognition and memory will collapse, and the objects will become blurry. Quickly tap 🧠 icon to restore your cognition.\n\nOnce you complete your objectives, tap \"Checkout\" button to continue. \n\n We strongly discourage skipping this scene, since it involves one of the basic mechanisms for this game.")
     @StateObject private var sceneStatus = SceneStatus()
     @EnvironmentObject var gameStatus: GameStatus
     var audioPlayer: AVAudioPlayer!
@@ -115,7 +117,7 @@ struct Market: View {
         VStack {
             topView().environmentObject(sceneStatus).environmentObject(gameStatus).environmentObject(cheat)
             Spacer()
-            Shelf().environmentObject(sceneStatus)
+            Shelf(products: sceneStatus.products).environmentObject(sceneStatus)
             Spacer()
             cartView().environmentObject(sceneStatus).environmentObject(gameStatus)
             Spacer()
@@ -202,14 +204,16 @@ private struct topView: View {
 }
 
 private struct Shelf: View {
-  
-    var products: [Product]
+    
+    var products: [Product] = []
     @State var productCounter: Int = 0
     @EnvironmentObject var sceneStatus: SceneStatus
-    init() {
-        self.products = loadProducts()
+    
+    init(products: [Product]) {
+        self.products = products
 
     }
+    
     var body: some View {
         VStack {
             ForEach(1..<6) {i in
@@ -221,8 +225,6 @@ private struct Shelf: View {
                         }
                         
                     }
-//                    Spacer()
-                    
                 }.padding()
             }
         }
@@ -299,8 +301,6 @@ private struct cartView: View {
                 }
                 return String(chars)
             }
-            
-            
         }
         
     }
@@ -353,11 +353,5 @@ struct ProductButton: View {
         }
         
         
-    }
-}
-
-struct Market_Previews: PreviewProvider {
-    static var previews: some View {
-        Market()
     }
 }

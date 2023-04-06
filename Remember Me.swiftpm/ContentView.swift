@@ -1,14 +1,3 @@
-/*
- Welcome to Remember Me
- 
- This game is designed to take advantage of screen space in Portrait mode
- 
- 
- */
-
-
-
-
 import SwiftUI
 import SpriteKit
 
@@ -19,7 +8,6 @@ public enum GameScene {
     case wallet
     case taxi
     case memory
-    case home
     case end
 }
 public class GameStatus: ObservableObject {
@@ -32,6 +20,7 @@ public class GameStatus: ObservableObject {
         self.currentScene = GameScene.intro
         self.disorderLevel = 0
         self.chatHistory = []
+        bgmPlayer.setLoop()
         bgmPlayer.playAduio()
     }
     
@@ -55,7 +44,7 @@ struct ContentView: View {
                         .transition(.slide)
                         .allowsHitTesting(false)
                         .onAppear(perform: {
-                            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) {_ in
+                            Timer.scheduledTimer(withTimeInterval: 6, repeats: false) {_ in
                                 withAnimation(.easeIn(duration: 2.6)) {
                                     isShowingText.toggle()
                                 }
@@ -164,11 +153,5 @@ struct ContentView: View {
     
     func startGame() {
         self.isStartGame.toggle()
-    }
-}
-
-struct Previews_ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

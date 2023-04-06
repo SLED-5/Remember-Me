@@ -20,6 +20,10 @@ class AudioEffectPlayer: ObservableObject {
         self.audioPlayer.play()
     }
     
+    func setLoop() {
+        self.audioPlayer.numberOfLoops = 100
+    }
+    
     func pauseAudio(){
         self.audioPlayer.pause()
     }

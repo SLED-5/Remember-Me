@@ -27,7 +27,7 @@
         },
 
     {
-        "npc": ["It's Mike's 25th birthday🎂 Anne and him will come home for dinner tonight. Can you buy some groceries🛒 on your way back?"],
+        "npc": ["It's little Mia's 13rd birthday🎂 Anne and Mike will come home for dinner tonight. Can you buy some groceries🛒 on your way back?"],
         "player": {
             "1": "Sure, I'll buy some 🦐 and 🐟",
             "2": "I'll grab some steak 🥩"
@@ -37,8 +37,8 @@
             "2": "I'll grab some steak 🥩"
         },
         "specialResponse": {
-            "1": "No honey. Mike is allergic to shrimp, don't you remember?",
-            "2": "Good idea💖 We have some shrimp in the refrigerator, but Mike is allergic to it."
+            "1": "No honey. Mike is allergic to shrimps, don't you remember?",
+            "2": "Good idea💖 We have some shrimps in the refrigerator, but Mike is allergic to them."
         },
         "nextScene": ""
     },

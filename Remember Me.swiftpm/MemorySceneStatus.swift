@@ -74,15 +74,8 @@ class MemorySceneStatus: ObservableObject {
     
     func generateBoard() -> [MemoryCard] {
         let preloadData = loadMemoryCard(file: boardFile)
-        let shuffle1 = preloadData.shuffled()
-        let shuffle2 = preloadData.shuffled()
-        var board: [MemoryCard] = []
-        
-        for i in 0..<preloadData.count {
-            board.append(shuffle1[i])
-            board.append(shuffle2[i])
-        }
-        return board
+        var board = preloadData + preloadData
+        return board.shuffled()
     }
     
     func updateProgress(item: MemoryCard) {

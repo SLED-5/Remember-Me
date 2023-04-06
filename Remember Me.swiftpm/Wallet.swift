@@ -49,7 +49,7 @@ private class SceneStatus: ObservableObject {
 }
 struct Wallet: View {
     @EnvironmentObject var gameStatus: GameStatus
-    @StateObject var cheat = Cheat(hintContent: "You’re trying to recall your credit card PIN.\nThis is the classic memory game called Shinkei-suijaku (or Nervous Breakdown).\nYou need to match cards with same icon.\nTap a card to reveal its icon.\nMatch all cards to pass this scene.\n\nWe strongly discourage skipping this scene, since it involves one of the basic mechanism for this game.")
+    @StateObject var cheat = Cheat(hintContent: "You’re trying to recall your credit card PIN.\nThis is the classic memory game called Shinkei-suijaku (or Nervous Breakdown).\nYou need to match cards with same icon.\nTap a card to reveal its icon.\nMatch all cards to pass this scene.\n\nWe strongly discourage skipping this scene, since it involves one of the basic mechanisms for this game.")
     @State var showSkipsheet: Bool = false
     @StateObject private var sceneStatus = SceneStatus()
     @StateObject private var memoryScene = MemorySceneStatus(boardFile: "wallet", disableDisorderLevel: true)
@@ -182,7 +182,6 @@ struct Wallet: View {
     
     private func showSkipSheetToggle() {
         self.showSkipsheet = true
-        self.sceneStatus.objectiveComplete = true
     }
     
     private func switchScene() {
