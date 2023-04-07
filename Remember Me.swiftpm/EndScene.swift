@@ -38,8 +38,7 @@ struct EndScene: View {
                         Text("Over **11 million** Americans provide unpaid care for people with Alzheimer's or other dementias.")
                             .padding(.bottom)
                         Text("No one should face Alzheimer's alone.")
-                        Text("If you want to learn more about Alzheimer's, its prevention and caregiving, Alzheimer's Association is a good place to start.")
-                        Text("www.alz.org")
+                        Text("If you want to learn more about Alzheimer's, its prevention and caregiving, [Alzheimer's Association](www.alz.org) is a good place to start.")
                     }
                     
                 }.multilineTextAlignment(.leading)
