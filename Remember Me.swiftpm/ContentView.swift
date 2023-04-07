@@ -121,6 +121,7 @@ struct ContentView: View {
                                     Text("Recall your memory / recognition")
                                         .foregroundColor(.white)
                                 } .padding(2)
+                                Text("(When your vision become blurry, quickly tap brain to make it clear)")
                                 HStack {
                                     Image(systemName: "bubble.left.and.exclamationmark.bubble.right")
                                         .font(.body)
