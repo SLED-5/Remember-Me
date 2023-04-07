@@ -118,10 +118,11 @@ struct ContentView: View {
                                     Image(systemName: "brain")
                                         .font(.body)
                                         .foregroundColor(.orange)
-                                    Text("Recall your memory / recognition")
+                                    Text("Recall your memory / cognition")
                                         .foregroundColor(.white)
                                 } .padding(2)
-                                Text("(When your vision become blurry, quickly tap brain to make it clear)")
+                                Text("(When your cognition become blurry, quickly tap 🧠 to make it clear)")
+                                    .foregroundColor(.white)
                                 HStack {
                                     Image(systemName: "bubble.left.and.exclamationmark.bubble.right")
                                         .font(.body)
@@ -129,6 +130,8 @@ struct ContentView: View {
                                     Text("Open Messages to review chat history")
                                         .foregroundColor(.white)
                                 }.padding(2)
+                                Text("(You can review Messages when you need information)")
+                                    .foregroundColor(.white)
                                 HStack {
                                     Image(systemName: "lock.open.trianglebadge.exclamationmark")
                                         .font(.body)
@@ -136,6 +139,8 @@ struct ContentView: View {
                                     Text("(A game cheat) View hints or skip current scene")
                                         .foregroundColor(.white)
                                 }.padding(2)
+                                Text("(Feel free to use this when you get stuck)")
+                                    .foregroundColor(.white)
                             }
                             
                         }
