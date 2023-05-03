@@ -15,7 +15,7 @@ Finish objective.
 
 And try your best to remember.
 
-## About Alzheimer's
+## About Alzheimer's Disease
 
 Remember Me features a brief moment in a day of a person with Alzheimer's disease. 
 
@@ -42,7 +42,7 @@ No one should face Alzheimer's alone.
 
 If you want to learn more about Alzheimer's, its prevention and caregiving, [Alzheimer's Association](www.alz.org) is a good place to start.
 
-## About gameplay design
+## About Gameplay Design
 
 The two core game mechanics, Progressive Blur and Shinkei-suijaku (Nervous Breakdown) Game, represent the difficulty of maintaining cognition and memory, one of the greatest challenges of Alzheimer's.
 
