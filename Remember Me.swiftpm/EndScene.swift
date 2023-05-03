@@ -21,20 +21,32 @@ struct EndScene: View {
                         .font(.title.weight(.bold))
                 }
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("This game features a brief moment in a day of a person with Alzheimer’s disease. ")
-                    Text("Alzheimer's disease (AD) is a neurodegenerative 🧠 disease that usually starts slowly and progressively worsens")
-                    Text("As the disease advances, symptoms can include problems with language, disorientation, mood swings, loss of motivation, self-neglect, and behavioral issues. 😶‍🌫️")
-                    Text("As a person's condition declines, they often withdraw from family and society. 🫥")
-                    Text("Gradually, bodily functions are lost, ultimately leading to death. 🪦")
-                        .padding(.bottom)
-                    Text("More than **6 million** Americans are living with Alzheimer's.")
-                    Text("By 2050, this number is projected to rise to nearly **13 million**.")
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text("This game features a brief moment in a day of a person with Alzheimer’s disease. ")
+                        Text("Alzheimer's disease (AD) is a neurodegenerative 🧠 disease that usually starts slowly and progressively worsens")
+                        Text("As the disease advances, symptoms can include problems with language, disorientation, mood swings, loss of motivation, self-neglect, and behavioral issues. 😶‍🌫️")
+                        Text("As a person's condition declines, they often withdraw from family and society. 🫥")
+                        Text("Gradually, bodily functions are lost, ultimately leading to death. 🪦")
+                            .padding(.bottom)
+                    }
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text("Do you know?")
+                            .bold()
+                        Text("More than **6 million** Americans are living with Alzheimer's.")
+                        Text("By 2050, this number is projected to rise to nearly **13 million**.")
+                        Text("**1 in 3** seniors dies with Alzheimer's or another dementia. It kills more than breast cancer and prostate cancer combined.")
+                        Text("Over **11 million** Americans provide unpaid care for people with Alzheimer's or other dementias.")
+                            .padding(.bottom)
+                        Text("No one should face Alzheimer's alone.")
+                        Text("If you want to learn more about Alzheimer's, its prevention and caregiving, [Alzheimer's Association](www.alz.org) is a good place to start.")
+                    }
+                    
                 }.multilineTextAlignment(.leading)
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("About Gameplay Design")
                         .font(.headline)
-                    Text("The two core game mechanics, Progressive Blur and Shinkei-suijaku (Nervous Breakdown) Game, represent the difficulty of maintaining cognition and memory.")
+                    Text("The two core game mechanics, Progressive Blur and Shinkei-suijaku (Nervous Breakdown) Game, represent the difficulty of maintaining cognition and memory, one of the greatest challenges of Alzheimer's.")
                     Text("The Grocery Store scene introduces the blur mechanism, and the Checkout scene teaches the basic rule of the Shinkei-suijaku (tap and pair). Then the final scene, Lost in Time, combines these two basic mechanisms to provide the greatest challenge, and also a metaphor of losing your memory piece by piece.")
                     Text("I want the player to feel frustrated and helpless when the objects become more and more blurry, and they have to recall harder and harder to continue playing.")
                     Text("The pain is no comparison to the real-life pain of losing recognition of things and memories of beloved ones.")
