@@ -2,7 +2,7 @@
 
 A game of love and tear, remebering and forgetting.
 
-*WWDC23 Swift Student Challenge Submission*
+*WWDC23 Swift Student Challenge Submission [Accepted]*
 
 ![Remeber Me](https://github.com/SLED-5/Remember-Me/blob/main/Remember%20Me.swiftpm/Resources/title.png)
 
