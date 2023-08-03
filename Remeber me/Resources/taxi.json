@@ -1,0 +1,71 @@
+[{
+        "npc": ["Good night sir, where can I take you tonight?"],
+        "player": {
+            "1": "I want to go home"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {
+        },
+        "nextScene": ""
+
+    },
+
+    {
+        "npc": ["Certainly sir, could you please tell me your address so I can take you there?"],
+        "player": {
+            "1": "My home",
+            "2": "My home",
+            "3": "My home",
+            "4": "My home"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {},
+        "nextScene": ""
+
+    },
+
+    {
+        "npc": ["I'm sorry, but I need to know the specific address.", "Do you remember any landmarks nearby?"],
+        "player": {
+            "1": "I don't remember"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {},
+        "nextScene": ""
+    },
+
+    {
+        "npc": ["Do you have any family member to contact?"],
+        "player": {
+            "1": "My wife, Emma",
+            "2": "My boy, Mike"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {"1": "You can give her a call to get the address.",
+            "2": "You can give him a call to see the address."},
+        "nextScene": ""
+    },
+    
+    {
+        "npc": ["Can I use your phone to make that call?"],
+        "player": {
+            "1":"(Give him your phone)"
+        },
+        "playerMsg": {
+        },
+        "specialResponse": {"1": "(*The driver helps you calling your family, and gets your address*) \nAlright, please sit tight. Let's go."},
+        "nextScene": ""
+    },
+    {
+        "npc": ["#NEXT_SCENE#"],
+        "player": {},
+        "playerMsg": {},
+        "specialResponse": {},
+        "nextScene": "memory"
+    }
+    
+]

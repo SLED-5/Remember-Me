@@ -1,0 +1,65 @@
+[{
+        "npc": ["Hi, how's your day sir?"],
+        "player": {
+            "1": "I'm good.",
+            "2": "I don't remeber."
+        },
+        "playerMsg": {
+            "1": "Robert"
+        },
+        "specialResponse": {
+            "1": "Glad to hear that.",
+            "2": "Oh, okay.."
+        },
+        "nextScene": ""
+
+    },
+
+    {
+        "npc": ["That would be $78.91 in total. Cash or card?"],
+        "player": {
+            "1": "Who are you?",
+            "2": "Where am I?"
+        },
+        "playerMsg": {
+            "1": "Who are you?",
+            "2": "Where am I?"
+        },
+        "specialResponse": {},
+        "nextScene": ""
+
+    },
+
+    {
+        "npc": ["I'm sorry sir?"],
+        "player": {
+            "1": "Who are you?",
+            "2": "Where am I?"
+        },
+        "playerMsg": {
+            "1": "Who are you?",
+            "2": "Where am I?"
+        },
+        "specialResponse": {},
+        "nextScene": ""
+    },
+
+    {
+        "npc": ["Err, my name is Claire and you're at Sam's Club. Do you need help sir?"],
+        "player": {
+            "1": "No, I'm fine."
+        },
+        "playerMsg": {
+            "1": "No, I'm fine."
+        },
+        "specialResponse": {},
+        "nextScene": ""
+    },
+    {
+        "npc": ["#NEXT_SCENE#"],
+        "player": {},
+        "playerMsg": {},
+        "specialResponse": {},
+        "nextScene": "wallet"
+    }
+]
