@@ -7,6 +7,8 @@ A game of love and tear, remebering and forgetting.
 
 ![Remeber Me](https://github.com/SLED-5/Remember-Me/blob/main/Remember%20Me.swiftpm/Resources/title.png)
 
+![Accepted](https://github.com/SLED-5/Remember-Me/blob/e2d4eca34382e5820cb77d3b0e20fd625fb8e32d/Screenshots/hooray.JPG)
+
 ## How to play
 Live the life of Robert.
 
